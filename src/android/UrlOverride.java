@@ -14,16 +14,7 @@ import android.content.Intent;
 
 public class UrlOverride extends CordovaPlugin {
 
-  // private CordovaInterface cordova;
   private static final String TAG = "UrlOverride";
-
-  // @Override
-  // public void init(CordovaInterface cordova) {
-  //     if (this.cordova != null) {
-  //         throw new IllegalStateException();
-  //     }
-  //     this.cordova = cordova;
-  // }
 
   @Override
   public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
