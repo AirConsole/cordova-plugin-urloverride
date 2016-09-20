@@ -24,7 +24,7 @@ public class UrlOverride extends CordovaPlugin {
   @Override
   public boolean onOverrideUrlLoading(String url) {
     Log.d(TAG, "onOverrideUrlLoading: " + url);
-    if (url && !url.startsWith("file://")) {
+    if (url.length() != 0 && !url.startsWith("file://")) {
       Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
       startActivity(i);
       return true;
