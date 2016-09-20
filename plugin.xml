@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="cordova-plugin-urloverwrite" version="1.0.0">
-    <name>UrlOverwrite</name>
-    <description>Overwrite the url</description>
+        id="cordova-plugin-urloverride" version="1.0.0">
+    <name>UrlOverride</name>
+    <description>Overrides the opening of external uris</description>
     <license>Apache 2.0</license>
-    <keywords>cordova,url,overwrite,loading,browser</keywords>
+    <keywords>cordova,url,override,loading,browser,external</keywords>
 
-    <js-module src="www/UrlOverwrite.js" name="UrlOverwrite">
-        <clobbers target="window.UrlOverwrite" />
+    <js-module src="www/UrlOverride.js" name="UrlOverride">
+        <clobbers target="window.UrlOverride" />
     </js-module>
 
     <platform name="android">
-        <source-file src="src/android/UrlOverwrite.java" target-dir="src/org/apache/cordova/urloverwrite" />
+        <source-file src="src/android/UrlOverride.java" target-dir="src/org/apache/cordova/urloverride" />
 
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="StatusBar">
-                <param name="android-package" value="org.apache.cordova.urloverwrite.UrlOverwrite" />
+                <param name="android-package" value="org.apache.cordova.urloverride.UrlOverride" />
             </feature>
         </config-file>
     </platform>
