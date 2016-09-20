@@ -16,6 +16,7 @@ public class UrlOverride extends CordovaPlugin {
   @Override
   public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
     Log.d(TAG, "execute action: " + action);
+    return true;
   }
 
   @Override
