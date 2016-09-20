@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-urloverwrite" version="1.0.0">
+    <name>UrlOverwrite</name>
+    <description>Overwrite the url</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,url,overwrite,loading,browser</keywords>
+
+    <js-module src="www/UrlOverwrite.js" name="UrlOverwrite">
+        <clobbers target="window.UrlOverwrite" />
+    </js-module>
+
+    <platform name="android">
+        <source-file src="src/android/UrlOverwrite.java" target-dir="src/org/apache/cordova/urloverwrite" />
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="StatusBar">
+                <param name="android-package" value="org.apache.cordova.urloverwrite.UrlOverwrite" />
+            </feature>
+        </config-file>
+    </platform>
+
+    <!-- <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Device">
+                <param name="ios-package" value="CDVDevice"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVDevice.h" />
+        <source-file src="src/ios/CDVDevice.m" />
+    </platform> -->
+</plugin>
