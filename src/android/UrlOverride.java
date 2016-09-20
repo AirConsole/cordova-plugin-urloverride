@@ -12,11 +12,6 @@ public class UrlOverride extends CordovaPlugin {
   private static final String TAG = "UrlOverride";
 
   @Override
-  public void initialize(CordovaInterface cordova, CordovaWebView webView) {
-      super.initialize(cordova, webView);
-  }
-
-  @Override
   public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
     Log.d(TAG, "execute action: " + action);
   }
