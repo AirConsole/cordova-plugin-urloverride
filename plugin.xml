@@ -12,7 +12,6 @@
 
     <platform name="android">
         <source-file src="src/android/UrlOverride.java" target-dir="src/org/apache/cordova/urloverride" />
-
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="UrlOverride">
                 <param name="android-package" value="org.apache.cordova.plugin.UrlOverride" />
