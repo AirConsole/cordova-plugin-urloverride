@@ -14,20 +14,20 @@
         <source-file src="src/android/UrlOverride.java" target-dir="src/org/apache/cordova/urloverride" />
 
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="StatusBar">
+            <feature name="UrlOverride">
                 <param name="android-package" value="org.apache.cordova.plugin.UrlOverride" />
                 <param name="onload" value="true" />
             </feature>
         </config-file>
     </platform>
 
-    <!-- <platform name="ios">
+    <platform name="ios">
         <config-file target="config.xml" parent="/*">
-            <feature name="Device">
-                <param name="ios-package" value="CDVDevice"/>
+            <feature name="UrlOverride">
+                <param name="ios-package" value="CDVUrlOverride"/>
             </feature>
         </config-file>
-        <header-file src="src/ios/CDVDevice.h" />
-        <source-file src="src/ios/CDVDevice.m" />
-    </platform> -->
+        <header-file src="src/ios/CDVUrlOverride.h" />
+        <source-file src="src/ios/CDVUrlOverride.m" />
+    </platform>
 </plugin>
