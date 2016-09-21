@@ -25,6 +25,7 @@
         <config-file target="config.xml" parent="/*">
             <feature name="UrlOverride">
                 <param name="ios-package" value="CDVUrlOverride"/>
+                <param name="onload" value="true"/>
             </feature>
         </config-file>
         <header-file src="src/ios/CDVUrlOverride.h" />
