@@ -1,7 +1,9 @@
 var exec = require('cordova/exec');
 
-window.UrlOverride = {
+var UrlOverride = {
   logIt: function() {
     exec(null, null, "UrlOverride", "logIt", []);
   }
 };
+
+module.exports = UrlOverride;
