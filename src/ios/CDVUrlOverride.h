@@ -5,5 +5,6 @@
 @interface CDVUrlOverride : CDVPlugin
 
 - (BOOL)shouldOverrideLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType;
+- (void) logIt:(CDVInvokedUrlCommand*)command;
 
 @end
