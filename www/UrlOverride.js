@@ -1,8 +1,9 @@
 var exec = require('cordova/exec');
 
 var UrlOverride = {
-  logIt: function() {
-    exec(null, null, "UrlOverride", "logIt", []);
+  logIt: function(output) {
+    console.log("LOG param", output);
+    exec(null, null, "UrlOverride", "logIt", [output]);
   }
 };
 

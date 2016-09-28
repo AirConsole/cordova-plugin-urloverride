@@ -22,19 +22,12 @@
 
 - (void)logIt:(CDVInvokedUrlCommand*)command
 {
-    CDVPluginResult* pluginResult = nil;
-    NSString* myarg = [command.arguments objectAtIndex:0];
-
     NSLog(@"============================");
-    NSLog(@"CDVUrlOverride logIt callled");
+    NSLog(@"CDVUrlOverride logIt called");
+    NSLog(@"%@", [command arguments]);
+    NSString* myarg = [command argumentAtIndex:0];
+    NSLog(@"%@", myarg);
     NSLog(@"============================");
-
-    if (myarg != nil) {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-    } else {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg was null"];
-    }
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
 @end
